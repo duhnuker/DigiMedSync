@@ -1,18 +1,14 @@
+import 'dotenv/config';
+//environment variables to automatically update port values
 import express from "express";
-import pg from "pg";
-
-const db = new pg.Client({
-    user: "postgres",
-    host: "localhost",
-    database: "digimedsync",
-    password: "Tuna1576",
-    port: 5432,
-  });
+import db from './db/index.js';
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3001;
 
-db.connect();
+// Get home page
+app.get("/", (req, res) => {
+})
 
 
 app.listen(port, () => {
