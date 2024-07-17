@@ -1,8 +1,11 @@
 import React from 'react'
+import SignInForm from '../components/SignInForm'
 
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <div className='flex place-content-center'>
+      <SignInForm />
+    </div>
   )
 }
 
